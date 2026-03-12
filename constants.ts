@@ -829,8 +829,8 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         explanation: "A minimal winning coalition contains just enough parties to secure a parliamentary majority (>50%). If any one party leaves, the coalition loses its majority.",
         options: [
           { id: '1a', text: "A coalition of all major parties", color: 'red', isCorrect: false },
-          { id: '1b', text: "A coalition with just enough seats to govern (>50%)", color: 'blue', isCorrect: true },
-          { id: '1c', text: "A government formed by a single minority party", color: 'yellow', isCorrect: false },
+          { id: '1b', text: "A government formed by a single minority party", color: 'blue', isCorrect: false },
+          { id: '1c', text: "A coalition with just enough seats to govern (>50%)", color: 'yellow', isCorrect: true },
           { id: '1d', text: "A coalition that lost the popular vote", color: 'green', isCorrect: false }
         ]
       },
@@ -841,9 +841,9 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         explanation: "Oversized cabinets include more parties than strictly necessary. They are often formed to amend the constitution (which may require a 2/3 supermajority) or to ensure national unity during a crisis.",
         options: [
           { id: '2a', text: "To save money on elections", color: 'red', isCorrect: false },
-          { id: '2b', text: "To pass constitutional amendments or handle crises", color: 'blue', isCorrect: true },
-          { id: '2c', text: "Because the constitution requires it", color: 'yellow', isCorrect: false },
-          { id: '2d', text: "To prevent the opposition from speaking", color: 'green', isCorrect: false }
+          { id: '2b', text: "Because the constitution requires it", color: 'blue', isCorrect: false },
+          { id: '2c', text: "To prevent the opposition from speaking", color: 'yellow', isCorrect: false },
+          { id: '2d', text: "To pass constitutional amendments or handle crises", color: 'green', isCorrect: true }
         ]
       },
       {
@@ -852,8 +852,8 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         timeLimit: 20,
         explanation: "In parliamentary systems, the executive (Prime Minister and Cabinet) is dependent on the confidence of the legislature and can be dismissed via a vote of no confidence.",
         options: [
-          { id: '3a', text: "The head of government is directly elected", color: 'red', isCorrect: false },
-          { id: '3b', text: "The executive is dependent on the legislature's confidence", color: 'blue', isCorrect: true },
+          { id: '3a', text: "The executive is dependent on the legislature's confidence", color: 'red', isCorrect: true },
+          { id: '3b', text: "The head of government is directly elected", color: 'blue', isCorrect: false },
           { id: '3c', text: "The president serves a fixed term", color: 'yellow', isCorrect: false },
           { id: '3d', text: "Strict separation of powers", color: 'green', isCorrect: false }
         ]
@@ -865,9 +865,9 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         explanation: "Presidential systems are characterized by a separation of powers, where both the president and the legislature are independently elected for fixed terms and cannot easily dismiss each other.",
         options: [
           { id: '4a', text: "Fusion of power", color: 'red', isCorrect: false },
-          { id: '4b', text: "Separation of powers", color: 'blue', isCorrect: true },
-          { id: '4c', text: "Executive dominance", color: 'yellow', isCorrect: false },
-          { id: '4d', text: "Legislative supremacy", color: 'green', isCorrect: false }
+          { id: '4b', text: "Executive dominance", color: 'blue', isCorrect: false },
+          { id: '4c', text: "Legislative supremacy", color: 'yellow', isCorrect: false },
+          { id: '4d', text: "Separation of powers", color: 'green', isCorrect: true }
         ]
       },
       {
@@ -877,8 +877,8 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         explanation: "Single-party majority parliamentary systems (like the UK Westminster model) produce the highest executive dominance because the cabinet controls a disciplined majority in the legislature.",
         options: [
           { id: '5a', text: "Presidential systems", color: 'red', isCorrect: false },
-          { id: '5b', text: "Single-party majority parliamentary systems", color: 'blue', isCorrect: true },
-          { id: '5c', text: "Multiparty parliamentary systems", color: 'yellow', isCorrect: false },
+          { id: '5b', text: "Multiparty parliamentary systems", color: 'blue', isCorrect: false },
+          { id: '5c', text: "Single-party majority parliamentary systems", color: 'yellow', isCorrect: true },
           { id: '5d', text: "The Swiss directorial system", color: 'green', isCorrect: false }
         ]
       },
@@ -900,8 +900,8 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         timeLimit: 20,
         explanation: "A minority government is formed by a party or coalition that does not control a majority of seats (>50%) in the legislature, relying on ad hoc support from other parties to pass laws.",
         options: [
-          { id: '7a', text: "A government representing ethnic minorities", color: 'red', isCorrect: false },
-          { id: '7b', text: "A cabinet that does not control a majority of legislative seats", color: 'blue', isCorrect: true },
+          { id: '7a', text: "A cabinet that does not control a majority of legislative seats", color: 'red', isCorrect: true },
+          { id: '7b', text: "A government representing ethnic minorities", color: 'blue', isCorrect: false },
           { id: '7c', text: "A government formed after losing an election", color: 'yellow', isCorrect: false },
           { id: '7d', text: "A cabinet with fewer ministers than usual", color: 'green', isCorrect: false }
         ]
@@ -913,9 +913,9 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         explanation: "This theory suggests that coalitions will form among parties that are adjacent to each other on the ideological spectrum, minimizing policy compromises.",
         options: [
           { id: '8a', text: "A coalition of parties that share a border region", color: 'red', isCorrect: false },
-          { id: '8b', text: "A coalition of ideologically adjacent parties with no unnecessary members", color: 'blue', isCorrect: true },
-          { id: '8c', text: "A coalition formed via social media connections", color: 'yellow', isCorrect: false },
-          { id: '8d', text: "A coalition that includes the median voter", color: 'green', isCorrect: false }
+          { id: '8b', text: "A coalition formed via social media connections", color: 'blue', isCorrect: false },
+          { id: '8c', text: "A coalition that includes the median voter", color: 'yellow', isCorrect: false },
+          { id: '8d', text: "A coalition of ideologically adjacent parties with no unnecessary members", color: 'green', isCorrect: true }
         ]
       },
       {

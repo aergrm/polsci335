@@ -190,7 +190,7 @@ const LiveSession: React.FC<LiveSessionProps> = ({ onBack }) => {
               if (gameState === 'results') {
                 if (opt.isCorrect) {
                   // Correct Answer State
-                  cardStyle = { backgroundColor: '#22c55e', opacity: 1, transform: 'scale(1.05)' };
+                  cardStyle = { backgroundColor: COLORS[opt.color], opacity: 1, transform: 'scale(1.05)', boxShadow: '0 0 20px rgba(0,0,0,0.2)' };
                   icon = <CheckCircle2 className="w-8 h-8 ml-auto text-white" />;
                 } else {
                   // Incorrect Answer State
