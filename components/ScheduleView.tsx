@@ -16,6 +16,9 @@ import {
   Factory, Cross, Tractor, GraduationCap, Calculator
 } from 'lucide-react';
 
+import { Week6Visuals } from './Week6Visuals';
+import { Week7Visuals } from './Week7Visuals';
+
 const ScheduleView: React.FC = () => {
   const [selectedWeek, setSelectedWeek] = useState<Week | null>(null);
 
@@ -120,6 +123,10 @@ const WeekDetailView: React.FC<{ week: Week, onBack: () => void }> = ({ week, on
         <Week4Visuals />
       ) : week.id === 5 ? (
         <Week5Visuals />
+      ) : week.id === 6 ? (
+        <Week6Visuals />
+      ) : week.id === 7 ? (
+        <Week7Visuals />
       ) : (
         <div className="bg-white p-12 rounded-xl shadow-sm border border-gray-100 text-center">
           <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
