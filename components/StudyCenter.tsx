@@ -5,11 +5,14 @@ import { Flashcard, QuizLevel, QuizQuestion } from '../types';
 import { 
   Layers, Brain, ChevronLeft, ChevronRight, Trophy, Lock, Unlock, 
   CheckCircle, XCircle, RotateCcw, Timer, Zap, Map, Info, HelpCircle,
-  Presentation, Users, Shuffle, Copy, Edit3, Trash2, UserMinus, UserCheck
+  Presentation, Users, Shuffle, Copy, Edit3, Trash2, UserMinus, UserCheck,
+  BookOpen
 } from 'lucide-react';
-import LiveSession from './LiveSession'; // Import the new component
+import LiveSession from './LiveSession';
+import ConceptMatcher from './ConceptMatcher';
+import SpeedRun from './SpeedRun';
 
-type Mode = 'menu' | 'flashcards' | 'quiz' | 'mania' | 'profiler' | 'live' | 'randomizer';
+type Mode = 'menu' | 'flashcards' | 'quiz' | 'mania' | 'profiler' | 'live' | 'randomizer' | 'matcher' | 'speedrun';
 
 const CLASS_ROSTER = [
   "Blakeman, Ellyn Mary",
@@ -50,6 +53,8 @@ const StudyCenter: React.FC = () => {
       {mode === 'profiler' && <CountryProfiler onBack={() => setMode('menu')} />}
       {mode === 'live' && <LiveSession onBack={() => setMode('menu')} />}
       {mode === 'randomizer' && <GroupRandomizer onBack={() => setMode('menu')} />}
+      {mode === 'matcher' && <ConceptMatcher onBack={() => setMode('menu')} />}
+      {mode === 'speedrun' && <SpeedRun onBack={() => setMode('menu')} />}
     </div>
   );
 };
@@ -61,7 +66,7 @@ const StudyMenu: React.FC<{ onSelect: (mode: Mode) => void }> = ({ onSelect }) =
       <p className="text-gray-600">Master the Lijphart Framework through interactive gameplay.</p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       <MenuCard 
         title="Flashcards" 
         desc="Core dimensions and key terminology review." 
@@ -75,6 +80,20 @@ const StudyMenu: React.FC<{ onSelect: (mode: Mode) => void }> = ({ onSelect }) =
         icon={<Brain size={28} />}
         color="bg-indigo-50 text-indigo-600"
         onClick={() => onSelect('quiz')}
+      />
+      <MenuCard 
+        title="Concept Matcher" 
+        desc="Midterm Prep: Match concepts to their definitions." 
+        icon={<BookOpen size={28} />}
+        color="bg-cyan-50 text-cyan-600"
+        onClick={() => onSelect('matcher')}
+      />
+      <MenuCard 
+        title="Speed Run" 
+        desc="Midterm Prep: Rapid-fire True/False questions." 
+        icon={<Zap size={28} />}
+        color="bg-orange-50 text-orange-600"
+        onClick={() => onSelect('speedrun')}
       />
       <MenuCard 
         title="Model Mania" 
