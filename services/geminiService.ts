@@ -3,7 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import { SCHEDULE, ASSIGNMENTS } from '../constants';
 
 // Initialize API Key safely
-const apiKey = process.env.API_KEY || '';
+const apiKey = (import.meta as any).env.VITE_GEMINI_API_KEY || (import.meta as any).env.VITE_API_KEY || process.env.API_KEY || process.env.GEMINI_API_KEY || process.env.REACT_APP_GEMINI_API_KEY || '';
 let ai: GoogleGenAI | null = null;
 
 try {
