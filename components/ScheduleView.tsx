@@ -743,8 +743,8 @@ const DhondtCalculator: React.FC = () => {
     return allocation;
   };
 
-  const allocation = calculateDhondt();
-  const totalVotes = Object.values(votes).reduce((a, b) => a + b, 0);
+  const allocation: { A: number, B: number, C: number, D: number } = calculateDhondt();
+  const totalVotes: number = (Object.values(votes) as number[]).reduce((a, b) => a + b, 0);
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
