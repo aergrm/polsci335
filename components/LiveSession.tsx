@@ -57,6 +57,37 @@ const LiveSession: React.FC<LiveSessionProps> = ({ onBack }) => {
 
   const revealAnswer = () => {
     setGameState('results');
+    try {
+      // Use Web Audio API for a guaranteed fun "ta-da!" sound without external links
+      const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+      if (!AudioContext) return;
+      const ctx = new AudioContext();
+
+      const playNote = (freq: number, startTime: number, duration: number) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime + startTime);
+        
+        gain.gain.setValueAtTime(0, ctx.currentTime + startTime);
+        gain.gain.linearRampToValueAtTime(0.5, ctx.currentTime + startTime + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + startTime + duration);
+        
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        
+        osc.start(ctx.currentTime + startTime);
+        osc.stop(ctx.currentTime + startTime + duration);
+      };
+
+      // Play a fun little arpeggio (C5, E5, G5, C6)
+      playNote(523.25, 0, 0.3);
+      playNote(659.25, 0.1, 0.3);
+      playNote(783.99, 0.2, 0.3);
+      playNote(1046.50, 0.3, 0.8);
+    } catch (e) {
+      console.error("Failed to play sound", e);
+    }
   };
 
   const nextSlide = () => {

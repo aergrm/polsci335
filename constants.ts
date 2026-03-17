@@ -826,11 +826,11 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         id: 'lq7-1',
         text: "What defines a 'Minimal Winning Coalition'?",
         timeLimit: 20,
-        explanation: "A minimal winning coalition contains just enough parties to secure a parliamentary majority (>50%). If any one party leaves, the coalition loses its majority.",
+        explanation: "A minimal winning coalition is one where every member party is strictly necessary to maintain a parliamentary majority. If any single party leaves, the coalition loses its majority.",
         options: [
           { id: '1a', text: "A coalition of all major parties", color: 'red', isCorrect: false },
           { id: '1b', text: "A government formed by a single minority party", color: 'blue', isCorrect: false },
-          { id: '1c', text: "A coalition with just enough seats to govern (>50%)", color: 'yellow', isCorrect: true },
+          { id: '1c', text: "A coalition where no member party is superfluous to maintaining a majority", color: 'yellow', isCorrect: true },
           { id: '1d', text: "A coalition that lost the popular vote", color: 'green', isCorrect: false }
         ]
       },
@@ -922,9 +922,9 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         id: 'lq7-9',
         text: "In a Semi-Presidential system, what is 'Cohabitation'?",
         timeLimit: 20,
-        explanation: "Cohabitation occurs when the directly elected President and the Prime Minister (who relies on legislative confidence) belong to opposing political parties.",
+        explanation: "Cohabitation occurs when the directly elected President and the Prime Minister (who relies on legislative confidence) belong to different political parties.",
         options: [
-          { id: '9a', text: "When the President and PM belong to opposing parties", color: 'red', isCorrect: true },
+          { id: '9a', text: "When the President and PM belong to different parties", color: 'red', isCorrect: true },
           { id: '9b', text: "When the executive and legislature share the same building", color: 'blue', isCorrect: false },
           { id: '9c', text: "When two parties merge into one", color: 'yellow', isCorrect: false },
           { id: '9d', text: "When the cabinet includes non-politician experts", color: 'green', isCorrect: false }
@@ -940,6 +940,133 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
           { id: '10b', text: "Oversized coalitions", color: 'blue', isCorrect: false },
           { id: '10c', text: "Single-party majority cabinets", color: 'yellow', isCorrect: true },
           { id: '10d', text: "Minimal winning coalitions", color: 'green', isCorrect: false }
+        ]
+      }
+    ]
+  },
+  {
+    weekId: 8,
+    title: "Week 8: Exec-Leg Relations II",
+    isLocked: false,
+    questions: [
+      {
+        id: 'lq8-1',
+        text: "According to the conventional wisdom challenged by Cheibub and Limongi, why are parliamentary democracies supposedly more stable than presidential ones?",
+        timeLimit: 20,
+        explanation: "The conventional view argues that the fusion of executive and legislative powers in parliamentarism creates governments supported by disciplined majorities, avoiding the stalemates of presidentialism.",
+        options: [
+          { id: '1a', text: "A) Because the fusion of powers creates governments supported by disciplined majorities.", color: 'green', isCorrect: true },
+          { id: '1b', text: "B) Because they always have a written constitution.", color: 'yellow', isCorrect: false },
+          { id: '1c', text: "C) Because they rely on decentralized committee systems.", color: 'red', isCorrect: false },
+          { id: '1d', text: "D) Because prime ministers have fixed terms in office.", color: 'blue', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq8-2',
+        text: "How do Cheibub and Limongi view minority governments in parliamentary and presidential regimes?",
+        timeLimit: 20,
+        explanation: "They argue that minority governments are frequent in both regimes and are not necessarily a sign of political instability or crisis.",
+        options: [
+          { id: '2a', text: "A) They are rare anomalies that almost always lead to democratic breakdown.", color: 'green', isCorrect: false },
+          { id: '2b', text: "B) They are frequent in both regimes and are not necessarily a sign of crisis.", color: 'yellow', isCorrect: true },
+          { id: '2c', text: "C) They only occur in presidential systems due to the separation of powers.", color: 'red', isCorrect: false },
+          { id: '2d', text: "D) They are the primary cause of legislative deadlock in parliamentary systems.", color: 'blue', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq8-3',
+        text: "What do the authors conclude about the relationship between legislative deadlock and the survival of presidential democracies?",
+        timeLimit: 20,
+        explanation: "They find that deadlock is relatively infrequent and its occurrence has only a very small impact on the probability of regime breakdown.",
+        options: [
+          { id: '3a', text: "A) Deadlock is the single most common cause of democratic breakdown.", color: 'green', isCorrect: false },
+          { id: '3b', text: "B) Deadlock is pervasive and makes presidential regimes inherently ungovernable.", color: 'yellow', isCorrect: false },
+          { id: '3c', text: "C) Deadlock is relatively infrequent and has a small impact on regime breakdown.", color: 'red', isCorrect: true },
+          { id: '3d', text: "D) Deadlock only occurs when the president has no veto power.", color: 'blue', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq8-4',
+        text: "According to the article, why is the argument that the 'threat of government dissolution' guarantees party discipline in parliamentary regimes flawed?",
+        timeLimit: 20,
+        explanation: "If a legislator's constituents support their rebellion against the party, early elections are not a credible threat to them, as they would likely be re-elected.",
+        options: [
+          { id: '4a', text: "A) Because prime ministers rarely have the power to dissolve parliament.", color: 'green', isCorrect: false },
+          { id: '4b', text: "B) Because legislators only care about policy, not about getting re-elected.", color: 'yellow', isCorrect: false },
+          { id: '4c', text: "C) Because party leaders cannot control access to the ballot.", color: 'red', isCorrect: false },
+          { id: '4d', text: "D) If constituents support the rebellion, early elections are not a credible threat.", color: 'blue', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq8-5',
+        text: "What do Cheibub and Limongi argue regarding the formation of coalition governments in presidential regimes?",
+        timeLimit: 20,
+        explanation: "They argue that the incentives for forming coalitions are actually very similar in both parliamentary and presidential regimes.",
+        options: [
+          { id: '5a', text: "A) The incentives for forming coalitions are very similar in both regimes.", color: 'green', isCorrect: true },
+          { id: '5b', text: "B) Presidential regimes offer no incentives for parties to cooperate.", color: 'yellow', isCorrect: false },
+          { id: '5c', text: "C) Coalitions only form when the president's party holds a majority of seats.", color: 'red', isCorrect: false },
+          { id: '5d', text: "D) High party fractionalization makes it impossible to form coalitions.", color: 'blue', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq8-6',
+        text: "How does high party fractionalization affect presidential democracies, according to the authors' findings?",
+        timeLimit: 20,
+        explanation: "Under high fractionalization, coalition governments actually become more frequent and significantly improve the regime's survival chances.",
+        options: [
+          { id: '6a', text: "A) It guarantees legislative paralysis and regime collapse.", color: 'green', isCorrect: false },
+          { id: '6b', text: "B) Coalition governments become more frequent and improve survival chances.", color: 'yellow', isCorrect: true },
+          { id: '6c', text: "C) It makes coalition formation more difficult and less frequent.", color: 'red', isCorrect: false },
+          { id: '6d', text: "D) It forces the president to rely exclusively on decree power.", color: 'blue', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq8-7',
+        text: "The authors argue that the real difference in performance between regimes might stem from the centralization of the decision-making process. Which is TRUE?",
+        timeLimit: 20,
+        explanation: "Both regimes can exhibit centralized or decentralized decision-making depending on legislative organization and executive agenda powers.",
+        options: [
+          { id: '7a', text: "A) Parliamentarism always features centralized decision-making.", color: 'green', isCorrect: false },
+          { id: '7b', text: "B) The US Congress is the typical model for all presidential legislatures.", color: 'yellow', isCorrect: false },
+          { id: '7c', text: "C) Both regimes can exhibit centralized or decentralized decision-making.", color: 'red', isCorrect: true },
+          { id: '7d', text: "D) Centralized decision-making is only possible with a single-party majority.", color: 'blue', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq8-8',
+        text: "How do strong presidential legislative powers (like decree power and exclusive initiative) affect executive-legislative relations?",
+        timeLimit: 20,
+        explanation: "They can be used to centralize the decision-making process and enforce discipline within the government's coalition.",
+        options: [
+          { id: '8a', text: "A) They inevitably lead to conflict, paralysis, and democratic breakdown.", color: 'green', isCorrect: false },
+          { id: '8b', text: "B) They allow the president to bypass the legislature entirely.", color: 'yellow', isCorrect: false },
+          { id: '8c', text: "C) They are only effective if the president's party has a majority in congress.", color: 'red', isCorrect: false },
+          { id: '8d', text: "D) They can centralize decision-making and enforce coalition discipline.", color: 'blue', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq8-9',
+        text: "Why do the authors use post-1988 Brazil as a key example in their argument?",
+        timeLimit: 20,
+        explanation: "It demonstrates that despite a fragmented party system, strong presidential agenda powers and centralized legislative rules can produce high legislative success and party discipline.",
+        options: [
+          { id: '9a', text: "A) It demonstrates that strong agenda powers can produce high legislative success.", color: 'green', isCorrect: true },
+          { id: '9b', text: "B) It proves that strong presidents and fragmented party systems lead to deadlock.", color: 'yellow', isCorrect: false },
+          { id: '9c', text: "C) It shows that proportional representation is incompatible with presidentialism.", color: 'red', isCorrect: false },
+          { id: '9d', text: "D) It is a classic example of a decentralized legislature.", color: 'blue', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq8-10',
+        text: "What is the ultimate conclusion Cheibub and Limongi reach regarding the survival of parliamentary vs. presidential democracies?",
+        timeLimit: 20,
+        explanation: "The better survival record of parliamentary regimes cannot be explained simply by the basic constitutional differences (fusion vs. separation of powers) between the two systems.",
+        options: [
+          { id: '10a', text: "A) Parliamentary regimes survive longer because they prevent minority governments.", color: 'green', isCorrect: false },
+          { id: '10b', text: "B) The better survival record cannot be explained simply by basic constitutional differences.", color: 'yellow', isCorrect: true },
+          { id: '10c', text: "C) Presidential regimes should be abandoned in favor of parliamentarism.", color: 'red', isCorrect: false },
+          { id: '10d', text: "D) Electoral laws are the only institutional feature that matters for regime survival.", color: 'blue', isCorrect: false }
         ]
       }
     ]
