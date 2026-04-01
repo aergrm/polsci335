@@ -215,7 +215,7 @@ const LiveSession: React.FC<LiveSessionProps> = ({ onBack }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
             {currentQ.options.map((opt) => {
               // Determination of visual state for each card
-              let cardStyle = { backgroundColor: COLORS[opt.color], opacity: 1, transform: 'scale(1)' };
+              let cardStyle: React.CSSProperties = { backgroundColor: COLORS[opt.color], opacity: 1, transform: 'scale(1)' };
               let icon = null;
 
               if (gameState === 'results') {

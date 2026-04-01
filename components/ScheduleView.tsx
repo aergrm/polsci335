@@ -18,6 +18,7 @@ import {
 
 import { Week6Visuals } from './Week6Visuals';
 import { Week7Visuals } from './Week7Visuals';
+import { Week10Visuals } from './Week10Visuals';
 
 const ScheduleView: React.FC = () => {
   const [selectedWeek, setSelectedWeek] = useState<Week | null>(null);
@@ -127,6 +128,8 @@ const WeekDetailView: React.FC<{ week: Week, onBack: () => void }> = ({ week, on
         <Week6Visuals />
       ) : week.id === 7 ? (
         <Week7Visuals />
+      ) : week.id === 10 ? (
+        <Week10Visuals />
       ) : (
         <div className="bg-white p-12 rounded-xl shadow-sm border border-gray-100 text-center">
           <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
