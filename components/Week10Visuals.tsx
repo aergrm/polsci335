@@ -18,17 +18,40 @@ const bicameralismData = [
 ];
 
 const malapportionmentData = [
-  { country: 'Argentina', gini: 0.61 },
-  { country: 'United States', gini: 0.49 },
-  { country: 'Switzerland', gini: 0.46 },
-  { country: 'Australia', gini: 0.36 },
-  { country: 'Canada', gini: 0.34 },
-  { country: 'Germany', gini: 0.32 },
-  { country: 'Spain', gini: 0.31 },
-  { country: 'India', gini: 0.10 },
-  { country: 'Austria', gini: 0.05 },
-  { country: 'Belgium', gini: 0.01 },
-  { country: 'Netherlands', gini: 0.00 },
+  { country: 'Argentina', gini: 0.61, samuelsSnyder: 0.49 },
+  { country: 'United States', gini: 0.49, samuelsSnyder: 0.36 },
+  { country: 'Switzerland', gini: 0.46, samuelsSnyder: 0.34 },
+  { country: 'Australia', gini: 0.36, samuelsSnyder: 0.30 },
+  { country: 'Canada', gini: 0.34, samuelsSnyder: null },
+  { country: 'Germany', gini: 0.32, samuelsSnyder: 0.24 },
+  { country: 'Spain', gini: 0.31, samuelsSnyder: 0.29 },
+  { country: 'India', gini: 0.10, samuelsSnyder: 0.07 },
+  { country: 'Austria', gini: 0.05, samuelsSnyder: 0.03 },
+  { country: 'Belgium', gini: 0.01, samuelsSnyder: null },
+  { country: 'Netherlands', gini: 0.00, samuelsSnyder: 0.00 },
+];
+
+const lowerChamberMalapportionmentData = [
+  { country: 'Tanzania', mal: 0.2619 },
+  { country: 'Korea', mal: 0.2075 },
+  { country: 'Ecuador', mal: 0.2040 },
+  { country: 'Kenya', mal: 0.1946 },
+  { country: 'Ghana', mal: 0.1782 },
+  { country: 'Zambia', mal: 0.1725 },
+  { country: 'Iceland', mal: 0.1684 },
+  { country: 'Bolivia', mal: 0.1677 },
+  { country: 'Malawi', mal: 0.1659 },
+  { country: 'St Lucia', mal: 0.1622 },
+  { country: 'Chile', mal: 0.1509 },
+  { country: 'Argentina', mal: 0.1405 },
+  { country: 'Gambia', mal: 0.1395 },
+  { country: 'Colombia', mal: 0.1324 },
+  { country: 'Andorra', mal: 0.1307 },
+  { country: 'Spain', mal: 0.0963 },
+  { country: 'Brazil', mal: 0.0913 },
+  { country: 'Georgia', mal: 0.0896 },
+  { country: 'Turkey', mal: 0.0859 },
+  { country: 'Seychelles', mal: 0.0808 },
 ];
 
 const federalismBicameralismData = [
@@ -55,6 +78,33 @@ const federalismBicameralismData = [
   { name: 'URU', federalism: 1.0, bicameralism: 3.0 },
 ];
 
+const usSenateMalapportionmentData = [
+  { year: 1790, mal: 0.2644 },
+  { year: 1800, mal: 0.2909 },
+  { year: 1810, mal: 0.2751 },
+  { year: 1820, mal: 0.3153 },
+  { year: 1830, mal: 0.3102 },
+  { year: 1840, mal: 0.2899 },
+  { year: 1850, mal: 0.3481 },
+  { year: 1860, mal: 0.2980 },
+  { year: 1870, mal: 0.3151 },
+  { year: 1880, mal: 0.2957 },
+  { year: 1890, mal: 0.3251 },
+  { year: 1900, mal: 0.3330 },
+  { year: 1910, mal: 0.3148 },
+  { year: 1920, mal: 0.3313 },
+  { year: 1930, mal: 0.3402 },
+  { year: 1940, mal: 0.3400 },
+  { year: 1950, mal: 0.3446 },
+  { year: 1960, mal: 0.3665 },
+  { year: 1970, mal: 0.3719 },
+  { year: 1980, mal: 0.3596 },
+  { year: 1990, mal: 0.3644 },
+  { year: 2000, mal: 0.3616 },
+  { year: 2010, mal: 0.3611 },
+  { year: 2020, mal: 0.3637 },
+];
+
 export const Week10Visuals: React.FC = () => {
   return (
     <div className="space-y-12 animate-fade-in">
@@ -78,7 +128,7 @@ export const Week10Visuals: React.FC = () => {
               <BarChart data={bicameralismData} layout="vertical" margin={{ top: 20, right: 20, bottom: 20, left: 80 }}>
                 <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
                 <XAxis type="number" domain={[0, 4]} ticks={[1, 2, 3, 4]} />
-                <YAxis dataKey="country" type="category" width={100} />
+                <YAxis dataKey="country" type="category" width={100} interval={0} />
                 <Tooltip 
                   formatter={(value: number, name: string, props: any) => [props.payload.type, 'Classification']}
                 />
@@ -105,16 +155,61 @@ export const Week10Visuals: React.FC = () => {
             <BarChart3 className="text-uwm-gold" /> Inequality of Representation (Malapportionment)
           </h3>
           <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
-            This chart shows the Gini Index of Inequality for federal and semifederal chambers (Table 11.1). Higher values indicate greater malapportionment, where smaller component units (like states or provinces) are significantly overrepresented compared to their population.
+            While the Gini index is often used for measuring income inequality, Lijphart notes it can measure any kind of inequality. Here it measures representational inequality in federal chambers (Table 11.1), alongside the Samuels-Snyder Index of Malapportionment. Higher values indicate smaller component units (like states or provinces) are significantly overrepresented compared to their population.
           </p>
           <div className="h-96 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={malapportionmentData} margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                <XAxis dataKey="country" angle={-45} textAnchor="end" height={60} />
-                <YAxis domain={[0, 0.7]} label={{ value: 'Gini Index of Inequality', angle: -90, position: 'insideLeft' }} />
+                <XAxis dataKey="country" angle={-45} textAnchor="end" height={60} interval={0} />
+                <YAxis domain={[0, 0.7]} label={{ value: 'Index Value', angle: -90, position: 'insideLeft' }} />
                 <Tooltip />
-                <Bar dataKey="gini" fill="#ef4444" radius={[4, 4, 0, 0]} name="Gini Index" />
+                <Bar dataKey="gini" fill="#ef4444" radius={[4, 4, 0, 0]} name="Gini Index of Inequality" />
+                <Bar dataKey="samuelsSnyder" fill="#3b82f6" radius={[4, 4, 0, 0]} name="Samuels-Snyder Index" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <BarChart3 className="text-uwm-gold" /> Lower Chamber Malapportionment (Samuels & Snyder)
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
+            While upper chambers are often intentionally malapportioned to represent regions, lower chambers can also suffer from severe malapportionment. This chart shows the 20 most malapportioned lower chambers according to Samuels and Snyder (2001). Notice the prevalence of Latin American and African nations.
+          </p>
+          <div className="h-96 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={lowerChamberMalapportionmentData} margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="country" angle={-45} textAnchor="end" height={60} interval={0} />
+                <YAxis domain={[0, 0.3]} label={{ value: 'MAL Index', angle: -90, position: 'insideLeft' }} />
+                <Tooltip />
+                <Bar dataKey="mal" fill="#10b981" radius={[4, 4, 0, 0]} name="MAL Index" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+          <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <BarChart3 className="text-uwm-gold" /> United States Senate Malapportionment (1790-2020)
+          </h3>
+          <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
+            This chart tracks the MAL Index for the United States Senate from the first census in 1790 to 2020 (Archer et al., 2024). It demonstrates a generally upward long-term trend, indicating that Senate malapportionment has worsened over time as population disparities between states have grown.
+          </p>
+          <div className="h-96 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={usSenateMalapportionmentData} margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
+                <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <XAxis dataKey="year" angle={-45} textAnchor="end" height={60} />
+                <YAxis domain={[0, 0.4]} label={{ value: 'MAL Index', angle: -90, position: 'insideLeft' }} />
+                <Tooltip />
+                <Bar dataKey="mal" fill="#8b5cf6" radius={[4, 4, 0, 0]} name="MAL Index" />
               </BarChart>
             </ResponsiveContainer>
           </div>
