@@ -1070,6 +1070,133 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         ]
       }
     ]
+  },
+  {
+    weekId: 10,
+    title: "Week 10: Legislative Institutions",
+    isLocked: false,
+    questions: [
+      {
+        id: 'lq10-1',
+        text: "In Lijphart’s framework, strong bicameralism combines which two features?",
+        timeLimit: 20,
+        explanation: "Lijphart defines strong bicameralism as a system in which both chambers are powerful and also represent different constituencies. That is why the United States, Switzerland, and Australia are classic strong bicameral cases.",
+        options: [
+          { id: '1a', text: "Symmetric powers and incongruent composition", color: 'red', isCorrect: true },
+          { id: '1b', text: "Asymmetric powers and congruent composition", color: 'blue', isCorrect: false },
+          { id: '1c', text: "Symmetric powers and congruent composition", color: 'yellow', isCorrect: false },
+          { id: '1d', text: "Weak powers and direct election", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-2',
+        text: "What does “symmetric bicameralism” mean?",
+        timeLimit: 20,
+        explanation: "The key issue is power, not election method. In a symmetric system, the upper house can genuinely block or co-determine legislation rather than merely delay it.",
+        options: [
+          { id: '2a', text: "The two chambers are elected by the same voters", color: 'red', isCorrect: false },
+          { id: '2b', text: "The second chamber has equal or near-equal legislative power", color: 'blue', isCorrect: true },
+          { id: '2c', text: "The upper chamber is directly elected", color: 'yellow', isCorrect: false },
+          { id: '2d', text: "The lower chamber can always override the upper chamber", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-3',
+        text: "What does “incongruent bicameralism” mean?",
+        timeLimit: 20,
+        explanation: "Incongruence refers to composition. If chambers are elected or constituted differently, they may produce different majorities and represent different interests.",
+        options: [
+          { id: '3a', text: "The two chambers are equally powerful", color: 'red', isCorrect: false },
+          { id: '3b', text: "The two chambers are chosen in different ways or represent different constituencies", color: 'blue', isCorrect: true },
+          { id: '3c', text: "The two chambers always disagree", color: 'yellow', isCorrect: false },
+          { id: '3d', text: "The upper chamber is weak", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-4',
+        text: "Which country is the clearest example of strong bicameralism in the readings?",
+        timeLimit: 20,
+        explanation: "The United States is the clearest example because both chambers must pass legislation and the Senate represents states rather than population proportionally, making it both symmetric and highly incongruent.",
+        options: [
+          { id: '4a', text: "New Zealand", color: 'red', isCorrect: false },
+          { id: '4b', text: "United States", color: 'blue', isCorrect: true },
+          { id: '4c', text: "Sweden", color: 'yellow', isCorrect: false },
+          { id: '4d', text: "Ireland", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-5',
+        text: "According to Fish, stronger legislatures help democracy mainly by improving:",
+        timeLimit: 20,
+        explanation: "Fish argues that stronger legislatures can better check executives and reduce abuses of power, which strengthens horizontal accountability.",
+        options: [
+          { id: '5a', text: "Military discipline", color: 'red', isCorrect: false },
+          { id: '5b', text: "Horizontal accountability", color: 'blue', isCorrect: true },
+          { id: '5c', text: "Presidential charisma", color: 'yellow', isCorrect: false },
+          { id: '5d', text: "Judicial activism only", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-6',
+        text: "Which statement best captures the relationship between bicameralism and federalism in Lijphart’s data?",
+        timeLimit: 20,
+        explanation: "Lijphart finds a strong empirical relationship between federalism and bicameralism. Not every bicameral system is federal, but every formal federal system in the sample has a bicameral legislature.",
+        options: [
+          { id: '6a', text: "Federalism and bicameralism are unrelated", color: 'red', isCorrect: false },
+          { id: '6b', text: "All federal systems in the sample are unicameral", color: 'blue', isCorrect: false },
+          { id: '6c', text: "All formally federal systems in the sample are bicameral", color: 'yellow', isCorrect: true },
+          { id: '6d', text: "Bicameralism exists only in federal systems", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-7',
+        text: "Why does bicameralism belong in Lijphart’s federal-unitary dimension?",
+        timeLimit: 20,
+        explanation: "In Lijphart’s framework, bicameralism often helps give regions or constituent units a voice in national lawmaking. That is why it fits the broader logic of dispersed rather than concentrated power.",
+        options: [
+          { id: '7a', text: "Because it always produces two-party systems", color: 'red', isCorrect: false },
+          { id: '7b', text: "Because second chambers usually represent territorial units and protect divided power", color: 'blue', isCorrect: true },
+          { id: '7c', text: "Because bicameralism increases turnout", color: 'yellow', isCorrect: false },
+          { id: '7d', text: "Because upper chambers are always directly elected", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-8',
+        text: "According to Fish, stronger legislatures also help democracy because they encourage stronger:",
+        timeLimit: 20,
+        explanation: "Fish says when legislatures matter, politicians invest more in party-building, which improves representation and accountability.",
+        options: [
+          { id: '8a', text: "Monarchies", color: 'red', isCorrect: false },
+          { id: '8b', text: "Political parties", color: 'blue', isCorrect: true },
+          { id: '8c', text: "Central banks", color: 'yellow', isCorrect: false },
+          { id: '8d', text: "Referendums", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-9',
+        text: "Which is the best argument for bicameralism from a consensus-democracy perspective?",
+        timeLimit: 20,
+        explanation: "Your slides contrast majoritarian and consensus views directly. From the consensus perspective, bicameralism is valuable because it creates veto points, slows hasty decisions, and encourages broader bargains.",
+        options: [
+          { id: '9a', text: "It ensures that one majority governs without obstacles", color: 'red', isCorrect: false },
+          { id: '9b', text: "It reduces the need for compromise", color: 'blue', isCorrect: false },
+          { id: '9c', text: "It protects minorities and forces broader agreement", color: 'yellow', isCorrect: true },
+          { id: '9d', text: "It makes representation perfectly equal across citizens", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq10-10',
+        text: "Why have some democracies moved from bicameralism to unicameralism?",
+        timeLimit: 20,
+        explanation: "Your slides note a one-way historical pattern toward unicameralism in some cases, especially where the second chamber is seen as duplicative, inefficient, or democratically weak. New Zealand, Denmark, Sweden, and Iceland are the examples highlighted.",
+        options: [
+          { id: '10a', text: "Bicameralism is unconstitutional in democracies", color: 'red', isCorrect: false },
+          { id: '10b', text: "Upper chambers are often seen as redundant or less legitimate, especially in small unitary states", color: 'blue', isCorrect: true },
+          { id: '10c', text: "Federal states do not need upper chambers anymore", color: 'yellow', isCorrect: false },
+          { id: '10d', text: "Strong bicameralism always causes regime collapse", color: 'green', isCorrect: false }
+        ]
+      }
+    ]
   }
 ];
 
