@@ -1197,6 +1197,133 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         ]
       }
     ]
+  },
+  {
+    weekId: 11,
+    title: "Week 11: Constitutions and Judicial Review",
+    isLocked: false,
+    questions: [
+      {
+        id: 'lq11-1',
+        text: "What does constitutional rigidity mean?",
+        timeLimit: 20,
+        explanation: "Constitutional rigidity means amendment is harder than passing ordinary legislation. That is the basic contrast with constitutional flexibility.",
+        options: [
+          { id: '1a', text: "The constitution cannot be interpreted by courts", color: 'red', isCorrect: false },
+          { id: '1b', text: "The constitution is harder to change than ordinary law", color: 'blue', isCorrect: true },
+          { id: '1c', text: "The constitution can only be changed by referendum", color: 'yellow', isCorrect: false },
+          { id: '1d', text: "The constitution is always unwritten", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-2',
+        text: "Which of the following usually makes a constitution more rigid?",
+        timeLimit: 20,
+        explanation: "Supermajority requirements are one of the clearest ways to make constitutional amendment harder. Other devices include multiple chambers, referendums, and state ratification.",
+        options: [
+          { id: '2a', text: "A simple majority vote in one chamber", color: 'red', isCorrect: false },
+          { id: '2b', text: "Fewer veto points", color: 'blue', isCorrect: false },
+          { id: '2c', text: "A two-thirds supermajority requirement", color: 'yellow', isCorrect: true },
+          { id: '2d', text: "No written constitution", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-3',
+        text: "Which country is the best example of a very rigid constitution?",
+        timeLimit: 20,
+        explanation: "In your notes and slides, the United States is the clearest example of a very rigid constitution because amendment requires 2/3 of Congress plus 3/4 of the states.",
+        options: [
+          { id: '3a', text: "United Kingdom", color: 'red', isCorrect: false },
+          { id: '3b', text: "New Zealand", color: 'blue', isCorrect: false },
+          { id: '3c', text: "United States", color: 'yellow', isCorrect: true },
+          { id: '3d', text: "Israel", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-4',
+        text: "Which country is the best example of a flexible constitutional order?",
+        timeLimit: 20,
+        explanation: "The United Kingdom is the classic example of flexibility because major constitutional rules can be changed by ordinary parliamentary legislation.",
+        options: [
+          { id: '4a', text: "Germany", color: 'red', isCorrect: false },
+          { id: '4b', text: "Australia", color: 'blue', isCorrect: false },
+          { id: '4c', text: "United States", color: 'yellow', isCorrect: false },
+          { id: '4d', text: "United Kingdom", color: 'green', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq11-5',
+        text: "According to Lijphart’s logic, constitutional rigidity fits the consensus model because it:",
+        timeLimit: 20,
+        explanation: "Rigidity belongs to the consensus side because it limits the ability of a bare majority to rewrite the rules of the game.",
+        options: [
+          { id: '5a', text: "strengthens executive dominance", color: 'red', isCorrect: false },
+          { id: '5b', text: "prevents simple majorities from changing the basic rules too easily", color: 'blue', isCorrect: true },
+          { id: '5c', text: "eliminates the role of courts", color: 'yellow', isCorrect: false },
+          { id: '5d', text: "creates a two-party system", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-6',
+        text: "What is judicial review?",
+        timeLimit: 20,
+        explanation: "Judicial review is the authority of courts to determine whether laws are constitutional and potentially invalidate them.",
+        options: [
+          { id: '6a', text: "The power of legislatures to review courts", color: 'red', isCorrect: false },
+          { id: '6b', text: "The power of courts to assess whether laws are constitutional", color: 'blue', isCorrect: true },
+          { id: '6c', text: "The power of presidents to veto laws", color: 'yellow', isCorrect: false },
+          { id: '6d', text: "The power of voters to remove judges by referendum", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-7',
+        text: "In the decentralized model of judicial review:",
+        timeLimit: 20,
+        explanation: "The American model is decentralized because constitutional review can arise in the ordinary judiciary, not only in one specialized court.",
+        options: [
+          { id: '7a', text: "only one special constitutional court can review laws", color: 'red', isCorrect: false },
+          { id: '7b', text: "many courts can consider constitutional questions", color: 'blue', isCorrect: true },
+          { id: '7c', text: "courts cannot invalidate laws at all", color: 'yellow', isCorrect: false },
+          { id: '7d', text: "review happens only through parliament", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-8',
+        text: "In the centralized model of judicial review:",
+        timeLimit: 20,
+        explanation: "The European or Kelsenian model centers review in a specialized constitutional court, as in Germany.",
+        options: [
+          { id: '8a', text: "review is exercised only by local courts", color: 'red', isCorrect: false },
+          { id: '8b', text: "legislatures have final authority over constitutionality", color: 'blue', isCorrect: false },
+          { id: '8c', text: "a specialized constitutional court has the main review authority", color: 'yellow', isCorrect: true },
+          { id: '8d', text: "judges are elected by referendum", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-9',
+        text: "What does parliamentary sovereignty mean in the classic U.K. model?",
+        timeLimit: 20,
+        explanation: "In the classic U.K. model, Parliament is sovereign, so courts do not exercise strong American-style judicial review over Acts of Parliament.",
+        options: [
+          { id: '9a', text: "Courts have the final word on constitutionality", color: 'red', isCorrect: false },
+          { id: '9b', text: "Regions can veto all legislation", color: 'blue', isCorrect: false },
+          { id: '9c', text: "Parliament has final authority and courts do not strongly strike down Acts of Parliament", color: 'yellow', isCorrect: true },
+          { id: '9d', text: "The prime minister can amend the constitution alone", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq11-10',
+        text: "What is the countermajoritarian difficulty?",
+        timeLimit: 20,
+        explanation: "The countermajoritarian difficulty is the democratic objection that unelected judges may overturn decisions made by elected representatives.",
+        options: [
+          { id: '10a', text: "The problem of too many political parties", color: 'red', isCorrect: false },
+          { id: '10b', text: "The problem of unelected judges overruling elected majorities", color: 'blue', isCorrect: true },
+          { id: '10c', text: "The problem of weak bicameralism", color: 'yellow', isCorrect: false },
+          { id: '10d', text: "The problem of federalism in large states", color: 'green', isCorrect: false }
+        ]
+      }
+    ]
   }
 ];
 
