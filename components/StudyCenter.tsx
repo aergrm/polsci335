@@ -6,13 +6,14 @@ import {
   Layers, Brain, ChevronLeft, ChevronRight, Trophy, Lock, Unlock, 
   CheckCircle, XCircle, RotateCcw, Timer, Zap, Map, Info, HelpCircle,
   Presentation, Users, Shuffle, Copy, Edit3, Trash2, UserMinus, UserCheck,
-  BookOpen
+  BookOpen, Landmark
 } from 'lucide-react';
 import LiveSession from './LiveSession';
 import ConceptMatcher from './ConceptMatcher';
 import SpeedRun from './SpeedRun';
+import BankSimulation from './BankSimulation';
 
-type Mode = 'menu' | 'flashcards' | 'quiz' | 'mania' | 'profiler' | 'live' | 'randomizer' | 'matcher' | 'speedrun';
+type Mode = 'menu' | 'flashcards' | 'quiz' | 'mania' | 'profiler' | 'live' | 'randomizer' | 'matcher' | 'speedrun' | 'bank';
 
 const CLASS_ROSTER = [
   "Blakeman, Ellyn Mary",
@@ -55,6 +56,7 @@ const StudyCenter: React.FC = () => {
       {mode === 'randomizer' && <GroupRandomizer onBack={() => setMode('menu')} />}
       {mode === 'matcher' && <ConceptMatcher onBack={() => setMode('menu')} />}
       {mode === 'speedrun' && <SpeedRun onBack={() => setMode('menu')} />}
+      {mode === 'bank' && <BankSimulation onBack={() => setMode('menu')} />}
     </div>
   );
 };
@@ -122,6 +124,13 @@ const StudyMenu: React.FC<{ onSelect: (mode: Mode) => void }> = ({ onSelect }) =
         icon={<Users size={28} />}
         color="bg-violet-50 text-violet-600"
         onClick={() => onSelect('randomizer')}
+      />
+      <MenuCard 
+        title="Bank Simulator" 
+        desc="Week 12: Play as the Central Bank." 
+        icon={<Landmark size={28} />}
+        color="bg-green-50 text-green-600"
+        onClick={() => onSelect('bank')}
       />
     </div>
   </div>
