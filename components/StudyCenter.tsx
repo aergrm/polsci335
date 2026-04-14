@@ -172,22 +172,67 @@ const GroupRandomizer: React.FC<{ onBack: () => void }> = ({ onBack }) => {
     
     if (activeNames.length === 0) return;
 
-    // Fisher-Yates Shuffle
-    const names = [...activeNames];
-    for (let i = names.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [names[i], names[j]] = [names[j], names[i]];
+    // Load past pairs history to avoid repeating groups
+    const historyKey = 'group_randomizer_history';
+    let pastPairs: Record<string, number> = {};
+    try {
+      pastPairs = JSON.parse(localStorage.getItem(historyKey) || '{}');
+    } catch (e) {}
+
+    let bestGroups: string[][] = [];
+    let lowestPenalty = Infinity;
+
+    // Generate 100 candidates and pick the one with the least historical overlap
+    for (let attempt = 0; attempt < 100; attempt++) {
+      const names = [...activeNames];
+      // Fisher-Yates Shuffle
+      for (let i = names.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [names[i], names[j]] = [names[j], names[i]];
+      }
+
+      // Distribute into groups (Round Robin)
+      const candidateGroups: string[][] = Array.from({ length: numGroups }, () => []);
+      names.forEach((name, index) => {
+        candidateGroups[index % numGroups].push(name);
+      });
+
+      // Calculate penalty based on past groupings
+      let penalty = 0;
+      for (const group of candidateGroups) {
+        for (let i = 0; i < group.length; i++) {
+          for (let j = i + 1; j < group.length; j++) {
+            const pairKey = [group[i], group[j]].sort().join('|');
+            penalty += (pastPairs[pairKey] || 0);
+          }
+        }
+      }
+
+      if (penalty < lowestPenalty) {
+        lowestPenalty = penalty;
+        bestGroups = candidateGroups;
+      }
+      
+      // If we found a perfect grouping with 0 overlap, we can stop early
+      if (penalty === 0) break;
     }
 
-    // Distribute into groups (Round Robin to ensure even distribution)
-    const newGroups: string[][] = Array.from({ length: numGroups }, () => []);
-    
-    names.forEach((name, index) => {
-      newGroups[index % numGroups].push(name);
-    });
+    // Update history with the chosen groups
+    for (const group of bestGroups) {
+      for (let i = 0; i < group.length; i++) {
+        for (let j = i + 1; j < group.length; j++) {
+          const pairKey = [group[i], group[j]].sort().join('|');
+          pastPairs[pairKey] = (pastPairs[pairKey] || 0) + 1;
+        }
+      }
+    }
+
+    try {
+      localStorage.setItem(historyKey, JSON.stringify(pastPairs));
+    } catch (e) {}
 
     // Remove empty groups if names < numGroups
-    setGroups(newGroups.filter(g => g.length > 0));
+    setGroups(bestGroups.filter(g => g.length > 0));
     setGenerated(true);
   };
 
@@ -224,6 +269,15 @@ const GroupRandomizer: React.FC<{ onBack: () => void }> = ({ onBack }) => {
                     className="text-xs text-blue-600 hover:underline"
                   >
                     Reset All
+                  </button>
+                  <button 
+                    onClick={() => {
+                      localStorage.removeItem('group_randomizer_history');
+                      alert('Group history cleared!');
+                    }}
+                    className="text-xs text-red-600 hover:underline border-l border-gray-300 pl-4"
+                  >
+                    Clear History
                   </button>
                </div>
             </div>
