@@ -1324,6 +1324,363 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
         ]
       }
     ]
+  },
+  {
+    weekId: 13,
+    title: "Week 13: Democratic Institutions and Foreign Policy",
+    isLocked: false,
+    questions: [
+      {
+        id: 'lq13-1',
+        text: "What is the main idea of Putnam’s two-level game theory?",
+        timeLimit: 20,
+        explanation: "Leaders bargain internationally and domestically at the same time.",
+        options: [
+          { id: '1a', text: "Leaders bargain internationally and domestically at the same time", color: 'red', isCorrect: true },
+          { id: '1b', text: "Foreign policy is determined only by military power", color: 'blue', isCorrect: false },
+          { id: '1c', text: "Domestic politics does not matter in diplomacy", color: 'yellow', isCorrect: false },
+          { id: '1d', text: "Democracies cannot make international agreements", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-2',
+        text: "In Putnam’s theory, what is Level I?",
+        timeLimit: 20,
+        explanation: "Level I refers to international bargaining between governments.",
+        options: [
+          { id: '2a', text: "Domestic approval by voters", color: 'red', isCorrect: false },
+          { id: '2b', text: "International bargaining between governments", color: 'blue', isCorrect: true },
+          { id: '2c', text: "Judicial review of foreign policy", color: 'yellow', isCorrect: false },
+          { id: '2d', text: "Public opinion polling", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-3',
+        text: "What is Level II in Putnam’s two-level game?",
+        timeLimit: 20,
+        explanation: "Level II is domestic approval or ratification.",
+        options: [
+          { id: '3a', text: "Military planning", color: 'red', isCorrect: false },
+          { id: '3b', text: "Trade negotiation", color: 'blue', isCorrect: false },
+          { id: '3c', text: "Domestic approval or ratification", color: 'yellow', isCorrect: true },
+          { id: '3d', text: "International law enforcement", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-4',
+        text: "What is a win-set?",
+        timeLimit: 20,
+        explanation: "The win-set is the set of all possible international agreements that would be accepted by domestic actors.",
+        options: [
+          { id: '4a', text: "The number of countries in an alliance", color: 'red', isCorrect: false },
+          { id: '4b', text: "The military resources available to a state", color: 'blue', isCorrect: false },
+          { id: '4c', text: "The public speeches made by a leader", color: 'yellow', isCorrect: false },
+          { id: '4d', text: "The set of agreements that domestic actors would accept", color: 'green', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq13-5',
+        text: "What does a large win-set usually mean?",
+        timeLimit: 20,
+        explanation: "A large win-set makes an international agreement easier to reach, though it reduces negotiating leverage.",
+        options: [
+          { id: '5a', text: "International agreement is easier to reach", color: 'red', isCorrect: true },
+          { id: '5b', text: "Domestic actors reject all agreements", color: 'blue', isCorrect: false },
+          { id: '5c', text: "The leader has no bargaining flexibility", color: 'yellow', isCorrect: false },
+          { id: '5d', text: "The country cannot negotiate internationally", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-6',
+        text: "Why can a small win-set sometimes help a leader in international bargaining?",
+        timeLimit: 20,
+        explanation: "It gives leverage by allowing the leader to say 'I cannot accept that deal at home.'",
+        options: [
+          { id: '6a', text: "It removes all domestic constraints", color: 'red', isCorrect: false },
+          { id: '6b', text: "It lets the leader say, “I cannot accept that deal at home”", color: 'blue', isCorrect: true },
+          { id: '6c', text: "It guarantees faster agreement", color: 'yellow', isCorrect: false },
+          { id: '6d', text: "It eliminates the need for ratification", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-7',
+        text: "According to Bueno de Mesquita and Smith, why do leaders care about domestic politics?",
+        timeLimit: 20,
+        explanation: "Leaders care because they want to stay in power, which requires satisfying their winning coalition.",
+        options: [
+          { id: '7a', text: "Domestic politics only matters in elections", color: 'red', isCorrect: false },
+          { id: '7b', text: "Foreign policy is never connected to survival", color: 'blue', isCorrect: false },
+          { id: '7c', text: "Leaders want to stay in power", color: 'yellow', isCorrect: true },
+          { id: '7d', text: "Domestic actors always agree with leaders", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-8',
+        text: "What is the “winning coalition”?",
+        timeLimit: 20,
+        explanation: "The winning coalition is the subset of the selectorate whose support is essential for a leader to stay in power.",
+        options: [
+          { id: '8a', text: "All citizens in the country", color: 'red', isCorrect: false },
+          { id: '8b', text: "All foreign allies of the state", color: 'blue', isCorrect: false },
+          { id: '8c', text: "The opposition party", color: 'yellow', isCorrect: false },
+          { id: '8d', text: "The group whose support a leader needs to stay in power", color: 'green', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq13-9',
+        text: "What is the selectorate?",
+        timeLimit: 20,
+        explanation: "The selectorate includes all individuals who have at least a nominal say in choosing the leader.",
+        options: [
+          { id: '9a', text: "The group with at least some role in choosing the leader", color: 'red', isCorrect: true },
+          { id: '9b', text: "The group of foreign diplomats negotiating a treaty", color: 'blue', isCorrect: false },
+          { id: '9c', text: "The military command structure", color: 'yellow', isCorrect: false },
+          { id: '9d', text: "The central bank leadership", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-10',
+        text: "Which domestic actor can affect foreign policy by ratifying or blocking agreements?",
+        timeLimit: 20,
+        explanation: "Legislatures serve as a common Level II constituency that must ratify or can block agreements.",
+        options: [
+          { id: '10a', text: "Weather agencies", color: 'red', isCorrect: false },
+          { id: '10b', text: "Legislatures", color: 'blue', isCorrect: true },
+          { id: '10c', text: "Sports organizations", color: 'yellow', isCorrect: false },
+          { id: '10d', text: "Foreign tourists", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-11',
+        text: "What is the main point of Lijphart’s two-dimensional map?",
+        timeLimit: 20,
+        explanation: "Democracies vary primarily in how they concentrate or disperse power across the two dimensions.",
+        options: [
+          { id: '11a', text: "All democracies have identical institutions", color: 'red', isCorrect: false },
+          { id: '11b', text: "Only presidential systems can be democratic", color: 'blue', isCorrect: false },
+          { id: '11c', text: "Democracies vary in how they concentrate or disperse power", color: 'yellow', isCorrect: true },
+          { id: '11d', text: "Foreign policy is unrelated to institutions", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq13-12',
+        text: "Which statement best summarizes Week 13?",
+        timeLimit: 20,
+        explanation: "Foreign policy is shaped by both international bargaining and domestic political constraints.",
+        options: [
+          { id: '12a', text: "Foreign policy is made only by international pressure", color: 'red', isCorrect: false },
+          { id: '12b', text: "Domestic institutions rarely affect diplomacy", color: 'blue', isCorrect: false },
+          { id: '12c', text: "Leaders can ignore domestic actors when negotiating", color: 'yellow', isCorrect: false },
+          { id: '12d', text: "Foreign policy is shaped by both international bargaining and domestic political constraints", color: 'green', isCorrect: true }
+        ]
+      }
+    ]
+  },
+  {
+    weekId: 14,
+    title: "Week 14: Democratic Performance and Quality",
+    isLocked: true,
+    questions: [
+      {
+        id: 'lq14-1',
+        text: "What question is Lijphart mainly asking in Chapter 15?",
+        timeLimit: 20,
+        explanation: "He's examining if the type of democracy affects macroeconomic management and control of violence.",
+        options: [
+          { id: '1a', text: "Does consensus democracy make a difference for effective government and policy-making?", color: 'red', isCorrect: true },
+          { id: '1b', text: "Should democracies adopt presidentialism?", color: 'blue', isCorrect: false },
+          { id: '1c', text: "Why do federal systems always outperform unitary systems?", color: 'yellow', isCorrect: false },
+          { id: '1d', text: "Why are two-party systems more democratic?", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq14-2',
+        text: "What is Lijphart’s overall conclusion about effective government?",
+        timeLimit: 20,
+        explanation: "He finds no clear evidence that majoritarian democracies are better at governing, contrary to conventional wisdom.",
+        options: [
+          { id: '2a', text: "Majoritarian democracies always govern better", color: 'red', isCorrect: false },
+          { id: '2b', text: "Majoritarian democracies do not outperform consensus democracies", color: 'blue', isCorrect: true },
+          { id: '2c', text: "Consensus democracies always grow faster economically", color: 'yellow', isCorrect: false },
+          { id: '2d', text: "Federal systems are always more stable", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq14-3',
+        text: "In Chapter 16, consensus democracy makes the clearest positive difference on:",
+        timeLimit: 20,
+        explanation: "Consensus democracies tend to be more egalitarian, have better representation of women, and higher voter turnout.",
+        options: [
+          { id: '3a', text: "military spending", color: 'red', isCorrect: false },
+          { id: '3b', text: "presidential power", color: 'blue', isCorrect: false },
+          { id: '3c', text: "democratic quality and inclusive outcomes", color: 'yellow', isCorrect: true },
+          { id: '3d', text: "cabinet secrecy", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq14-4',
+        text: "Which phrase does Lijphart use for more inclusive and humane democratic outcomes?",
+        timeLimit: 20,
+        explanation: "Lijphart argues that consensus democracies are 'kinder and gentler' than majoritarian ones.",
+        options: [
+          { id: '4a', text: "“strong state democracy”", color: 'red', isCorrect: false },
+          { id: '4b', text: "“efficient majoritarianism”", color: 'blue', isCorrect: false },
+          { id: '4c', text: "“competitive pluralism”", color: 'yellow', isCorrect: false },
+          { id: '4d', text: "“kinder, gentler democracy”", color: 'green', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq14-5',
+        text: "According to Lijphart, which statement is most accurate?",
+        timeLimit: 20,
+        explanation: "While majoritarianism can make fast decisions, those decisions are not necessarily better or more stable over time.",
+        options: [
+          { id: '5a', text: "Faster decision-making is not automatically better government", color: 'red', isCorrect: true },
+          { id: '5b', text: "Slower government is always better government", color: 'blue', isCorrect: false },
+          { id: '5c', text: "Coalition cabinets cannot be effective", color: 'yellow', isCorrect: false },
+          { id: '5d', text: "Representation always reduces accountability", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq14-6',
+        text: "Which of the following is associated with higher democratic quality in Lijphart’s analysis?",
+        timeLimit: 20,
+        explanation: "Broader representation of groups translates directly to higher 'quality' metrics in his evaluation.",
+        options: [
+          { id: '6a', text: "single-party cabinets", color: 'red', isCorrect: false },
+          { id: '6b', text: "broader representation and inclusion", color: 'blue', isCorrect: true },
+          { id: '6c', text: "executive dominance", color: 'yellow', isCorrect: false },
+          { id: '6d', text: "fewer parties and fewer checks", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq14-7',
+        text: "Which dimension matters most for Lijphart’s strongest performance claims?",
+        timeLimit: 20,
+        explanation: "The executives-parties dimension (e.g. proportional representation, coalition cabinets) has the strongest impact on 'kinder, gentler' policies.",
+        options: [
+          { id: '7a', text: "local–national dimension", color: 'red', isCorrect: false },
+          { id: '7b', text: "presidential–parliamentary dimension", color: 'blue', isCorrect: false },
+          { id: '7c', text: "executives–parties dimension", color: 'yellow', isCorrect: true },
+          { id: '7d', text: "judicial-only dimension", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq14-8',
+        text: "What is the main takeaway from Chapters 15 and 16 together?",
+        timeLimit: 20,
+        explanation: "Consensus democracy does not sacrifice effective governance, while still providing better representation and democratic quality.",
+        options: [
+          { id: '8a', text: "Majoritarian democracy is always superior", color: 'red', isCorrect: false },
+          { id: '8b', text: "Institutions do not affect democratic outcomes", color: 'blue', isCorrect: false },
+          { id: '8c', text: "Consensus democracy only helps small countries", color: 'yellow', isCorrect: false },
+          { id: '8d', text: "Consensus democracies do at least as well on effectiveness and better on democratic quality", color: 'green', isCorrect: true }
+        ]
+      }
+    ]
+  },
+  {
+    weekId: 15,
+    title: "Week 15: Contemporary Challenges to Democracy",
+    isLocked: true,
+    questions: [
+      {
+        id: 'lq15-1',
+        text: "What is Lijphart’s main recommendation in Chapter 17?",
+        timeLimit: 20,
+        explanation: "He strongly recommends the consensus model, especially for newly democratizing countries.",
+        options: [
+          { id: '1a', text: "The consensus option is generally the more attractive democratic choice", color: 'red', isCorrect: true },
+          { id: '1b', text: "Every country should copy the UK exactly", color: 'blue', isCorrect: false },
+          { id: '1c', text: "Presidentialism is always best for divided societies", color: 'yellow', isCorrect: false },
+          { id: '1d', text: "Institutions matter less than culture", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq15-2',
+        text: "For which kinds of countries does Lijphart say federalist institutions are especially useful?",
+        timeLimit: 20,
+        explanation: "Federalism helps manage deep societal divisions and provides representation in large/diverse populations.",
+        options: [
+          { id: '2a', text: "only very small island states", color: 'red', isCorrect: false },
+          { id: '2b', text: "large countries and countries with deep ethnic or religious divisions", color: 'blue', isCorrect: true },
+          { id: '2c', text: "only two-party systems", color: 'yellow', isCorrect: false },
+          { id: '2d', text: "only presidential systems", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq15-3',
+        text: "What is one of Lijphart’s important caveats about institutions and culture?",
+        timeLimit: 20,
+        explanation: "A society's culture must support the institutions, but institutional design also helps shape political culture.",
+        options: [
+          { id: '3a', text: "Institutions never shape politics", color: 'red', isCorrect: false },
+          { id: '3b', text: "Culture fully determines democracy", color: 'blue', isCorrect: false },
+          { id: '3c', text: "Institutions and political culture can shape each other", color: 'yellow', isCorrect: true },
+          { id: '3d', text: "Political culture does not matter at all", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq15-4',
+        text: "Which country does Lijphart use as a reason for optimism about consensus institutions in newer democracies?",
+        timeLimit: 20,
+        explanation: "South Africa's transition and adoption of consensus elements provides a model for managing deep societal divisions.",
+        options: [
+          { id: '4a', text: "France", color: 'red', isCorrect: false },
+          { id: '4b', text: "United States", color: 'blue', isCorrect: false },
+          { id: '4c', text: "United Kingdom", color: 'yellow', isCorrect: false },
+          { id: '4d', text: "South Africa", color: 'green', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq15-5',
+        text: "Which of the following is the best example of democratic backsliding?",
+        timeLimit: 20,
+        explanation: "Backsliding involves the incremental erosion of democratic checks and balances by elected leaders.",
+        options: [
+          { id: '5a', text: "an elected leader weakening courts and checks in order to stay in power", color: 'red', isCorrect: true },
+          { id: '5b', text: "a coalition government forming after an election", color: 'blue', isCorrect: false },
+          { id: '5c', text: "a country adopting proportional representation", color: 'yellow', isCorrect: false },
+          { id: '5d', text: "a parliament increasing women’s representation", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq15-6',
+        text: "What is populism most commonly understood to mean in democratic politics?",
+        timeLimit: 20,
+        explanation: "Populism pits a 'pure people' against corrupt elites and institutions, often challenging constitutional limits.",
+        options: [
+          { id: '6a', text: "rule by constitutional courts", color: 'red', isCorrect: false },
+          { id: '6b', text: "a claim to represent “the real people” against elites and institutions", color: 'blue', isCorrect: true },
+          { id: '6c', text: "a strong independent central bank", color: 'yellow', isCorrect: false },
+          { id: '6d', text: "coalition bargaining among many parties", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq15-7',
+        text: "Why might consensus institutions be more resilient against democratic erosion?",
+        timeLimit: 20,
+        explanation: "By avoiding concentrated power, consensus institutions make it harder for a single leader to quickly dismantle democratic checks.",
+        options: [
+          { id: '7a', text: "because they eliminate all conflict", color: 'red', isCorrect: false },
+          { id: '7b', text: "because they remove elections", color: 'blue', isCorrect: false },
+          { id: '7c', text: "because they disperse power and create more checks", color: 'yellow', isCorrect: true },
+          { id: '7d', text: "because they always produce two-party systems", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'lq15-8',
+        text: "What is the broad final lesson of Week 15?",
+        timeLimit: 20,
+        explanation: "Institutional choices like electoral rules and executive-legislative relations are critical for how well a democracy performs and survives.",
+        options: [
+          { id: '8a', text: "democracy works best when power is always concentrated", color: 'red', isCorrect: false },
+          { id: '8b', text: "democratic institutions do not matter very much", color: 'blue', isCorrect: false },
+          { id: '8c', text: "only political culture matters for democratic survival", color: 'yellow', isCorrect: false },
+          { id: '8d', text: "institutional design affects representation, quality, and democratic resilience", color: 'green', isCorrect: true }
+        ]
+      }
+    ]
   }
 ];
 
