@@ -18,11 +18,15 @@ import {
 
 import { Week6Visuals } from './Week6Visuals';
 import { Week7Visuals } from './Week7Visuals';
+import { Week8Visuals } from './Week8Visuals';
+import { Week9Visuals } from './Week9Visuals';
 import { Week10Visuals } from './Week10Visuals';
 import { Week11Visuals } from './Week11Visuals';
 import { Week12Visuals } from './Week12Visuals';
 import { Week13Visuals } from './Week13Visuals';
 import { Week14Visuals } from './Week14Visuals';
+import { Week15Visuals } from './Week15Visuals';
+import { Week16Visuals } from './Week16Visuals';
 
 const ScheduleView: React.FC = () => {
   const [selectedWeek, setSelectedWeek] = useState<Week | null>(null);
@@ -57,7 +61,7 @@ const ScheduleView: React.FC = () => {
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pr-8">
               <div className="md:w-1/4">
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-2 ${
-                   week.id <= 14 ? 'bg-uwm-gold text-white' : 'bg-gray-100 text-gray-600'
+                   week.id <= 16 ? 'bg-uwm-gold text-white' : 'bg-gray-100 text-gray-600'
                 }`}>
                   Week {week.id}
                 </span>
@@ -132,6 +136,10 @@ const WeekDetailView: React.FC<{ week: Week, onBack: () => void }> = ({ week, on
         <Week6Visuals />
       ) : week.id === 7 ? (
         <Week7Visuals />
+      ) : week.id === 8 ? (
+        <Week8Visuals />
+      ) : week.id === 9 ? (
+        <Week9Visuals />
       ) : week.id === 10 ? (
         <Week10Visuals />
       ) : week.id === 11 ? (
@@ -142,6 +150,10 @@ const WeekDetailView: React.FC<{ week: Week, onBack: () => void }> = ({ week, on
         <Week13Visuals />
       ) : week.id === 14 ? (
         <Week14Visuals />
+      ) : week.id === 15 ? (
+        <Week15Visuals />
+      ) : week.id === 16 ? (
+        <Week16Visuals />
       ) : (
         <div className="bg-white p-12 rounded-xl shadow-sm border border-gray-100 text-center">
           <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
