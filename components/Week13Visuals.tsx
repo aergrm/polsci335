@@ -39,6 +39,11 @@ export const Week13Visuals: React.FC = () => {
           <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
             In Robert Putnam's framework, a leader's "Win-Set" is the range of international agreements that would be successfully ratified domestically. A <strong>larger win-set</strong> makes reaching an international agreement easier, but reduces the negotiator's bargaining leverage. Conversely, a <strong>smaller win-set</strong> strengthens the negotiator's hand ("my hands are tied"), but risks failure of the negotiations.
           </p>
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
+            <p className="text-sm text-blue-800">
+              <strong>Understanding the Chart:</strong> The Y-axis represents an <em>illustrative theoretical score (0-100)</em>. It shows the inverse relationship between how likely an agreement is to be reached (green/blue bars) versus how much leverage a leader has to extract concessions from foreign rivals (dark bars) depending on the size of their domestic win-set.
+            </p>
+          </div>
           <div className="h-96 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={winSetData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
@@ -63,6 +68,11 @@ export const Week13Visuals: React.FC = () => {
           <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
             According to scholars like Fearon and Bueno de Mesquita & Smith, a critical difference in foreign policy behavior stems from the political costs leaders face if they escalate a crisis and then back down. Democracies generate much higher <strong>audience costs</strong> because leaders are accountable to voters and political opposition, making democratic threats highly credible in international diplomacy.
           </p>
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
+            <p className="text-sm text-blue-800">
+              <strong>Understanding the Chart:</strong> The Y-axis is a <em>theoretical index (0-100)</em> of the political penalty a leader pays domestically (e.g., losing approval or elections) if they back out at various stages of an international crisis. The steeper blue line shows that democratic leaders are punished much more severely for making empty threats compared to autocrats.
+            </p>
+          </div>
           <div className="h-96 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={audienceCostData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
@@ -87,6 +97,11 @@ export const Week13Visuals: React.FC = () => {
           <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
             Thomas Risse-Kappen compares the relative power of the state vs. society in shaping foreign policy. Highly centralized states (like France) are <strong>state-dominated</strong>, isolating foreign policy from public opinion. Highly decentralized states (like the U.S.) are <strong>society-dominated</strong>, making them highly responsive to public opinion and interest groups.
           </p>
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
+            <p className="text-sm text-blue-800">
+              <strong>Understanding the Chart:</strong> The X-axis represents a 1 to 5 scale where 1 means very weak central institutions (power spread out to society/legislatures) and 5 means very strong central institutions (power concentrated in the executive). The labels on the tooltip show the specific "Policy Network Type" Risse-Kappen assigns to each system.
+            </p>
+          </div>
           <div className="h-96 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={domesticStructureData} layout="vertical" margin={{ top: 20, right: 30, left: 40, bottom: 5 }}>
