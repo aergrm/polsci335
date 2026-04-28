@@ -1479,7 +1479,7 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
   {
     weekId: 14,
     title: "Week 14: Democratic Performance and Quality",
-    isLocked: true,
+    isLocked: false,
     questions: [
       {
         id: 'lq14-1',
@@ -1495,13 +1495,13 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
       },
       {
         id: 'lq14-2',
-        text: "What is Lijphart’s overall conclusion about effective government?",
+        text: "What is Lijphart's overall conclusion about majoritarian vs. consensus democracies and effective government?",
         timeLimit: 20,
         explanation: "He finds no clear evidence that majoritarian democracies are better at governing, contrary to conventional wisdom.",
         options: [
-          { id: '2a', text: "Majoritarian democracies always govern better", color: 'red', isCorrect: false },
-          { id: '2b', text: "Majoritarian democracies do not outperform consensus democracies", color: 'blue', isCorrect: true },
-          { id: '2c', text: "Consensus democracies always grow faster economically", color: 'yellow', isCorrect: false },
+          { id: '2a', text: "Majoritarian democracies govern more effectively", color: 'red', isCorrect: false },
+          { id: '2b', text: "Consensus and majoritarian democracies perform similarly on effectiveness", color: 'blue', isCorrect: true },
+          { id: '2c', text: "Consensus democracies always grow faster", color: 'yellow', isCorrect: false },
           { id: '2d', text: "Federal systems are always more stable", color: 'green', isCorrect: false }
         ]
       },
@@ -1575,6 +1575,18 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
           { id: '8b', text: "Institutions do not affect democratic outcomes", color: 'blue', isCorrect: false },
           { id: '8c', text: "Consensus democracy only helps small countries", color: 'yellow', isCorrect: false },
           { id: '8d', text: "Consensus democracies do at least as well on effectiveness and better on democratic quality", color: 'green', isCorrect: true }
+        ]
+      },
+      {
+        id: 'lq14-9',
+        text: "What happened in New Zealand after adopting PR in 1996?",
+        timeLimit: 20,
+        explanation: "The introduction of the MMP electoral system led to more proportional outcomes, increased women's representation, and made coalition governments the norm.",
+        options: [
+          { id: '9a', text: "Turnout decreased and multipartism declined", color: 'red', isCorrect: false },
+          { id: '9b', text: "Women's representation increased and coalition cabinets became normal", color: 'blue', isCorrect: true },
+          { id: '9c', text: "Economic growth collapsed", color: 'yellow', isCorrect: false },
+          { id: '9d', text: "The country returned to plurality elections", color: 'green', isCorrect: false }
         ]
       }
     ]
