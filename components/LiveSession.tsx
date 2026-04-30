@@ -38,7 +38,47 @@ const LiveSession: React.FC<LiveSessionProps> = ({ onBack }) => {
   }, [gameState, timer]);
 
   const startQuiz = (quiz: LiveQuizSession) => {
-    setSelectedQuiz(quiz);
+    const clonedQuiz: LiveQuizSession = JSON.parse(JSON.stringify(quiz));
+    const fixedColors: ('red'|'blue'|'yellow'|'green')[] = ['red', 'blue', 'yellow', 'green'];
+    let lastCorrectColorIndex = -1;
+
+    clonedQuiz.questions.forEach((q) => {
+      const correctOptionOriginal = q.options.find(o => o.isCorrect);
+      const incorrectOptionsOriginal = q.options.filter(o => !o.isCorrect);
+
+      if (!correctOptionOriginal) return;
+
+      const optionCount = q.options.length;
+      let availableIndices = Array.from({length: optionCount}, (_, i) => i);
+      
+      if (lastCorrectColorIndex !== -1 && availableIndices.includes(lastCorrectColorIndex) && optionCount > 1) {
+        availableIndices = availableIndices.filter(i => i !== lastCorrectColorIndex);
+      }
+      
+      const newCorrectIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+      lastCorrectColorIndex = newCorrectIndex;
+
+      const newOptions = new Array(optionCount);
+      newOptions[newCorrectIndex] = correctOptionOriginal;
+      
+      const shuffledIncorrect = [...incorrectOptionsOriginal];
+      for (let i = shuffledIncorrect.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledIncorrect[i], shuffledIncorrect[j]] = [shuffledIncorrect[j], shuffledIncorrect[i]];
+      }
+
+      let incorrectIdx = 0;
+      for (let i = 0; i < optionCount; i++) {
+        if (i !== newCorrectIndex) {
+          newOptions[i] = shuffledIncorrect[incorrectIdx++];
+        }
+        newOptions[i].color = fixedColors[i % 4];
+      }
+
+      q.options = newOptions;
+    });
+
+    setSelectedQuiz(clonedQuiz);
     setGameState('lobby');
     setCurrentQuestionIndex(0);
   };
@@ -121,7 +161,7 @@ const LiveSession: React.FC<LiveSessionProps> = ({ onBack }) => {
               }`}
             >
               <div>
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Week {quiz.weekId}</span>
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{quiz.label || `Week ${quiz.weekId}`}</span>
                 <h3 className={`text-xl font-bold transition-colors ${quiz.isLocked ? 'text-gray-500' : 'text-gray-900 group-hover:text-uwm-gold'}`}>
                   {quiz.title}
                 </h3>
@@ -213,7 +253,7 @@ const LiveSession: React.FC<LiveSessionProps> = ({ onBack }) => {
 
           {/* Options Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-            {currentQ.options.map((opt) => {
+            {currentQ.options.map((opt, index) => {
               // Determination of visual state for each card
               let cardStyle: React.CSSProperties = { backgroundColor: COLORS[opt.color], opacity: 1, transform: 'scale(1)' };
               let icon = null;
@@ -236,10 +276,7 @@ const LiveSession: React.FC<LiveSessionProps> = ({ onBack }) => {
                   style={cardStyle}
                 >
                    <div className="bg-black/20 w-10 h-10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                     {opt.color === 'red' && '▲'}
-                     {opt.color === 'blue' && '◆'}
-                     {opt.color === 'yellow' && '●'}
-                     {opt.color === 'green' && '■'}
+                     {String.fromCharCode(65 + index)}
                    </div>
                    <span className="text-left">{opt.text}</span>
                    {icon}

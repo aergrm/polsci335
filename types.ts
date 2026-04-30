@@ -75,6 +75,7 @@ export interface LiveQuestion {
 export interface LiveQuizSession {
   weekId: number;
   title: string;
+  label?: string;
   questions: LiveQuestion[];
   isLocked?: boolean;
 }

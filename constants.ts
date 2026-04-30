@@ -1592,6 +1592,86 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
     ]
   },
   {
+    weekId: 104,
+    label: "Review",
+    title: "Quiz 4 Review Session",
+    isLocked: false,
+    questions: [
+      {
+        id: 'rev4-1',
+        text: "What characterizes 'symmetric' bicameralism?",
+        timeLimit: 20,
+        explanation: "Symmetric bicameralism means both the upper and lower chambers have roughly equal legislative power.",
+        options: [
+          { id: '1a', text: "Both chambers are exactly the same size", color: 'red', isCorrect: false },
+          { id: '1b', text: "Both chambers have roughly equal legislative power", color: 'blue', isCorrect: true },
+          { id: '1c', text: "Both chambers are elected from the exact same districts", color: 'yellow', isCorrect: false },
+          { id: '1d', text: "One chamber is appointed, the other is elected", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'rev4-2',
+        text: "If a constitution requires a 2/3 supermajority in parliament to be changed, it is considered:",
+        timeLimit: 20,
+        explanation: "Flexible constitutions can be changed by regular majorities, while rigid ones require supermajorities or other special procedures.",
+        options: [
+          { id: '2a', text: "Unwritten", color: 'red', isCorrect: false },
+          { id: '2b', text: "Flexible", color: 'blue', isCorrect: false },
+          { id: '2c', text: "Rigid", color: 'yellow', isCorrect: true },
+          { id: '2d', text: "Symmetric", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'rev4-3',
+        text: "In Putnam's Two-Level Game, what does a 'small win-set' mean for a leader?",
+        timeLimit: 20,
+        explanation: "A small win-set (fewer acceptable domestic deals) can be a bargaining advantage internationally, as the leader can say 'my legislature won't accept anything else.'",
+        options: [
+          { id: '3a', text: "The leader is guaranteed to lose the next election", color: 'red', isCorrect: false },
+          { id: '3b', text: "The leader has high bargaining power but a higher risk of deal failure", color: 'blue', isCorrect: true },
+          { id: '3c', text: "The leader can approve any treaty without legislative consent", color: 'yellow', isCorrect: false },
+          { id: '3d', text: "The leader's country has poor military strength", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'rev4-4',
+        text: "According to Lijphart, what is the macroeconomic performance of consensus democracies?",
+        timeLimit: 20,
+        explanation: "Lijphart finds that consensus democracies perform about as well on economic growth and unemployment, but significantly better on controlling inflation.",
+        options: [
+          { id: '4a', text: "It is significantly worse than majoritarian democracies", color: 'red', isCorrect: false },
+          { id: '4b', text: "Consensus democracies suffer from massive hyperinflation", color: 'blue', isCorrect: false },
+          { id: '4c', text: "Consensus democracies perform similarly on growth but have lower inflation", color: 'yellow', isCorrect: true },
+          { id: '4d', text: "Majoritarian democracies have much lower unemployment", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'rev4-5',
+        text: "Which of the following is considered a 'kinder, gentler' outcome typical of consensus systems?",
+        timeLimit: 20,
+        explanation: "Consensus democracies generally feature larger welfare states, better environmental protection, more foreign aid, and lower incarceration rates.",
+        options: [
+          { id: '5a', text: "Higher incarceration rates", color: 'red', isCorrect: false },
+          { id: '5b', text: "Lower voter turnout", color: 'blue', isCorrect: false },
+          { id: '5c', text: "Fewer women in parliament", color: 'yellow', isCorrect: false },
+          { id: '5d', text: "Larger social welfare states", color: 'green', isCorrect: true }
+        ]
+      },
+      {
+        id: 'rev4-6',
+        text: "Which of these accurately summarizes Lijphart's final conclusion (Chapter 17)?",
+        timeLimit: 20,
+        explanation: "Because consensus democracy provides better representation and equal governing effectiveness, it is his recommended model, especially for divided societies.",
+        options: [
+          { id: '6a', text: "Democratizing countries should always adopt Westminster models", color: 'red', isCorrect: false },
+          { id: '6b', text: "Consensus democracy is the more attractive option overall", color: 'blue', isCorrect: true },
+          { id: '6c', text: "Institutions do not matter; only political culture matters", color: 'yellow', isCorrect: false },
+          { id: '6d', text: "Federalism makes consensus democracies fail", color: 'green', isCorrect: false }
+        ]
+      }
+    ]
+  },
+  {
     weekId: 15,
     title: "Week 15: Contemporary Challenges to Democracy",
     isLocked: true,
@@ -1690,6 +1770,134 @@ export const LIVE_QUIZZES: LiveQuizSession[] = [
           { id: '8b', text: "democratic institutions do not matter very much", color: 'blue', isCorrect: false },
           { id: '8c', text: "only political culture matters for democratic survival", color: 'yellow', isCorrect: false },
           { id: '8d', text: "institutional design affects representation, quality, and democratic resilience", color: 'green', isCorrect: true }
+        ]
+      }
+    ]
+  },
+  {
+    weekId: 44,
+    label: "Quiz",
+    title: "Quiz 4",
+    isLocked: false,
+    questions: [
+      {
+        id: 'q4-1',
+        text: "What is the main purpose of constitutional review?",
+        timeLimit: 20,
+        explanation: "Constitutional review allows courts to ensure that laws and executive actions adhere to the constitution.",
+        options: [
+          { id: '1a', text: "To allow the executive to rewrite laws without the legislature", color: 'red', isCorrect: false },
+          { id: '1b', text: "To allow courts to evaluate whether laws or government actions violate the constitution", color: 'blue', isCorrect: true },
+          { id: '1c', text: "To replace elections with legal decision-making", color: 'yellow', isCorrect: false },
+          { id: '1d', text: "To guarantee that every law is popular with voters", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-2',
+        text: "In a federal system, political authority is:",
+        timeLimit: 20,
+        explanation: "Federalism involves dividing sovereignty and authority between a central national government and regional subnational governments.",
+        options: [
+          { id: '2a', text: "Concentrated entirely in the national executive", color: 'red', isCorrect: false },
+          { id: '2b', text: "Divided between national and subnational governments", color: 'blue', isCorrect: true },
+          { id: '2c', text: "Given only to courts", color: 'yellow', isCorrect: false },
+          { id: '2d', text: "Controlled directly by international organizations", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-3',
+        text: "What is one common challenge of federalism?",
+        timeLimit: 20,
+        explanation: "With multiple levels of government having policy authority, voters may struggle to know who to hold accountable.",
+        options: [
+          { id: '3a', text: "It always creates one-party rule", color: 'red', isCorrect: false },
+          { id: '3b', text: "It can make responsibility unclear when citizens try to blame or reward government performance", color: 'blue', isCorrect: true },
+          { id: '3c', text: "It prevents local governments from making policy", color: 'yellow', isCorrect: false },
+          { id: '3d', text: "It eliminates policy variation across regions", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-4',
+        text: "What is the main democratic trade-off of central bank independence?",
+        timeLimit: 20,
+        explanation: "While independence shields economic policy from political manipulation, it also means elected officials have less direct control over it.",
+        options: [
+          { id: '4a', text: "It may improve credibility, but it can reduce direct democratic control over economic policy", color: 'red', isCorrect: true },
+          { id: '4b', text: "It increases party competition, but eliminates courts", color: 'blue', isCorrect: false },
+          { id: '4c', text: "It strengthens legislatures, but weakens constitutions", color: 'yellow', isCorrect: false },
+          { id: '4d', text: "It improves turnout, but prevents federalism", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-5',
+        text: "According to Putnam’s two-level game, leaders must bargain:",
+        timeLimit: 20,
+        explanation: "Leaders must navigate international negotiations and domestic ratification concurrently.",
+        options: [
+          { id: '5a', text: "Only with foreign governments", color: 'red', isCorrect: false },
+          { id: '5b', text: "Only with voters at home", color: 'blue', isCorrect: false },
+          { id: '5c', text: "At both the international level and the domestic level", color: 'yellow', isCorrect: true },
+          { id: '5d', text: "Only with courts and central banks", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-6',
+        text: "In Putnam’s argument, a “win-set” refers to:",
+        timeLimit: 20,
+        explanation: "The win-set comprises all possible international agreements that would find domestic support and ultimately be successfully implemented.",
+        options: [
+          { id: '6a', text: "The set of agreements that can be accepted internationally and ratified domestically", color: 'red', isCorrect: true },
+          { id: '6b', text: "The list of countries that always win wars", color: 'blue', isCorrect: false },
+          { id: '6c', text: "The group of judges that supports the government", color: 'yellow', isCorrect: false },
+          { id: '6d', text: "The number of parties in a legislature", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-7',
+        text: "According to Lijphart, consensus democracies are generally associated with:",
+        timeLimit: 20,
+        explanation: "Consensus democracy embraces multiple parties sharing power, proportional representation, and broad representation of various societal segments.",
+        options: [
+          { id: '7a', text: "Concentrated executive power and single-party majority cabinets", color: 'red', isCorrect: false },
+          { id: '7b', text: "Proportional representation, coalition government, and power-sharing", color: 'blue', isCorrect: true },
+          { id: '7c', text: "No elections", color: 'yellow', isCorrect: false },
+          { id: '7d', text: "Military rule", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-8',
+        text: "What is democratic backsliding?",
+        timeLimit: 20,
+        explanation: "Backsliding is typically a gradual process consisting of subtle executive overreach and incremental erosion of democratic institutions.",
+        options: [
+          { id: '8a', text: "A gradual weakening of democratic institutions, rights, and accountability", color: 'red', isCorrect: true },
+          { id: '8b', text: "Any normal change in government after an election", color: 'blue', isCorrect: false },
+          { id: '8c', text: "A country becoming more federal", color: 'yellow', isCorrect: false },
+          { id: '8d', text: "A court reviewing a law", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-9',
+        text: "What is populism in the context of democratic backsliding?",
+        timeLimit: 20,
+        explanation: "Populist leaders frequently claim that they uniquely represent the 'real' people in opposition to corrupt elites or institutions.",
+        options: [
+          { id: '9a', text: "A style or ideology that claims to represent “the real people” against a corrupt elite", color: 'red', isCorrect: true },
+          { id: '9b', text: "A system where courts choose all representatives", color: 'blue', isCorrect: false },
+          { id: '9c', text: "A rule requiring coalition government", color: 'yellow', isCorrect: false },
+          { id: '9d', text: "A theory that democracy should have no elections", color: 'green', isCorrect: false }
+        ]
+      },
+      {
+        id: 'q4-10',
+        text: "What is one reason dispersed power may help democratic resilience?",
+        timeLimit: 20,
+        explanation: "When power is dispersed, independent branches (like legislatures and judiciaries) act as checks against executive domination.",
+        options: [
+          { id: '10a', text: "It creates more institutional checks against executive capture", color: 'red', isCorrect: true },
+          { id: '10b', text: "It gives the executive unlimited authority", color: 'blue', isCorrect: false },
+          { id: '10c', text: "It removes opposition parties", color: 'yellow', isCorrect: false },
+          { id: '10d', text: "It prevents all disagreement", color: 'green', isCorrect: false }
         ]
       }
     ]
